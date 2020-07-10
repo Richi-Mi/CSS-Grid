@@ -1,10 +1,44 @@
 .contenedor{
     display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3, minmax(100px, 400px));
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
 } 
+.caja:nth-child(1){
+    background: #ff8000;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+   /* clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%); */
+   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+.caja:nth-child(8){
+    background-color: crimson;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+.caja:nth-child(9){
+    background-color: crimson;
+    grid-row-start: 4;
+    grid-row-end: 6;
+
+    grid-column: 4 / 5;
+}
+.caja:nth-child(12){
+    background-color: #080;
+    /*grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;*/
+    grid-area: 2 / 3 / 4 / 5;
+   clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
 /*@media screen and (max-width: 500px){}*/
 /*minmax(100px, 300px)
   repeat(5, 1fr)
   repeat(6, minmax(100px, 1fr)*/
+/* DEscargar asamblea*/
